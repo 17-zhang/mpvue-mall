@@ -7,10 +7,12 @@
 		"minified": true,
 		"newFeature": true
 	},
-	"miniprogramRoot": "dist/wx/",
+	"miniprogramRoot": "dist",
+	"qcloudRoot": "server/",
 	"compileType": "miniprogram",
 	"appid": "wx289794dc6eee03d6",
 	"projectname": "mpvue-mall",
+	"libVersion": "1.0",
 	"condition": {
 		"search": {
 			"current": -1,
