@@ -36,9 +36,36 @@ export default {
             "selectedColor": "#b4282d",
             "color": "#666",
             "list": [{
-                "pagePath": "pages/index/main",
-                "iconPath": "static/images/ic_menu_choice_nor.png"
-            }]
+                    "pagePath": "pages/index/main",
+                    "iconPath": "static/images/ic_menu_choice_nor.png",
+                    "selectedIconPath": "static/images/ic_menu_choice_pressed.png",
+                    "text": "首页"
+                },
+                {
+                    "pagePath": "pages/topic/main",
+                    "iconPath": "static/images/ic_menu_topic_nor.png",
+                    "selectedIconPath": "static/images/ic_menu_topic_pressed.png",
+                    "text": "专题"
+                },
+                {
+                    "pagePath": "pages/category/main",
+                    "iconPath": "static/images/ic_menu_sort_nor.png",
+                    "selectedIconPath": "static/images/ic_menu_sort_pressed.png",
+                    "text": "分类"
+                },
+                {
+                    "pagePath": "pages/cart/main",
+                    "iconPath": "static/images/ic_menu_shoping_nor.png",
+                    "selectedIconPath": "static/images/ic_menu_shoping_pressed.png",
+                    "text": "购物车"
+                },
+                {
+                    "pagePath": "pages/my/main",
+                    "iconPath": "static/images/ic_menu_me_nor.png",
+                    "selectedIconPath": "static/images/ic_menu_me_pressed.png",
+                    "text": "我的"
+                }
+            ]
         }
     }
 }
