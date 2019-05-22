@@ -53,7 +53,7 @@ export default {
                 url: ""
             },
             {
-                title: "地址管理",
+                title: "我的收藏",
                 icon: "icon-shoucang",
                 url: "/pages/collectlist/main"
             },
