@@ -19,20 +19,69 @@
 </template>
 
 <script>
+import { get, toLogin, login } from "../../utils"
+
 export default {
-  data () {
-    return {
-        avator: "http://yanxuan.nosdn.127.net/8945ae63d940cc42406c3f67019c5cb6.png",
-
-    };
-  },
-
+    onShow() {
+        // 可以通过 wx.getSetting 先查询一下用户是否授权了 "scope.record" 这个scope 
+        if(login()) {
+            this.userInfo = login();
+            console.log(this.userInfo);
+            this.avator = this.userInfo.avatorUrl
+        }
+    },
+    data () {
+        return {
+            avator: "http://yanxuan.nosdn.127.net/8945ae63d940cc42406c3f67019c5cb6.png",
+            allcheck: false,
+            listData: [],
+            listids: [],
+            userInfo: {},
+            listData: [{
+                title: "我的订单",
+                icon: "icon-unie64a",
+                url: ""
+            },
+            {
+                title: "优惠券",
+                icon: "icon-youhuiquan",
+                url: ""
+            },
+            {
+                title: "我的足迹",
+                icon: "icon-zuji",
+                url: ""
+            },
+            {
+                title: "地址管理",
+                icon: "icon-shoucang",
+                url: "/pages/collectlist/main"
+            },
+            {
+                title: "地址管理",
+                icon: "icon-dizhiguanli",
+                url: "/pages/address/main"
+            },
+            {
+                title: "联系客服",
+                icon: "icon-lianxikefu",
+                url: ""
+            },
+            {
+                title: "帮助中心",
+                icon: "icon-bangzhuzhongxin",
+                url: ""
+            },
+            {
+                title: "意见反馈",
+                icon: "icon-yijianfankui",
+                url: "/pages/feedback/main"
+            }
+            ]
+        };
+    },
   components: {},
-
-  computed: {},
-
   mounted: {},
-
   methods: {
       toLogin() {
           if(!this.userInfo.avatorUrl) {
@@ -53,4 +102,5 @@ export default {
 }
 </script>
 <style lang='scss' scoped>
+@import "./style"
 </style>
